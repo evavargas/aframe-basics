@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Basic Scene - A-Frame">
+    <title>Basic Scene A-Frame</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <!--npm install aframe-->
+</head>
+
+<body>
+    <a-scene>
+        <a-torus color="#213041" arc="350" position="0 0 -8" radius="4.5" radius-tubular="0.1"></a-torus>
+        <a-torus-knot position="0 2 -8" arc="180" p="3" q="7" radius="1" radius-tubular="0.1" color="#b84739">
+        </a-torus-knot>
+        <a-octahedron position="-2 1 -6" color="violet" rotation="0 45 25"></a-octahedron>
+        <a-cone position="2 1 -6" color="green" rotation="-90 25 0" radius-bottom="0" radius-top="0.5"></a-cone>
+        <a-plane position="0 0 -8" width="8" height="4" color="peru" rotation="-90"></a-plane>
+        <a-sky color="skyblue"></a-sky>
+        <!--Controles básicos wasd en teclado-->
+        <!--look controls agrega perspectiva-->
+        <a-entity position="0 1.6 0" id="cameraMan">
+            <a-entity wasd-controls look-controls camera="near: 0.005; far: 10; fov:150 "></a-entity>
+        </a-entity>
+
+    </a-scene>
+
+</body>
+
+</html>

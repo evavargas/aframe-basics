@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Basic Scene - A-Frame">
+    <title>Basic Scene A-Frame</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.0/dist/aframe-extras.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+    <!--npm install aframe-->
+</head>
+
+<body>
+    <a-scene>
+        <a-assets>
+            <!-- <img src="./snow.jpg" alt="snow" id="snow" >  -->
+            <a-asset-item id="bulbasaur-obj" src="./models/bulbasaur/bulbasaur-pokemon-go.obj"></a-asset-item>
+            <a-asset-item id="bulbasaur-mtl" src="./models/bulbasaur/bulbasaur-pokemon-go.mtl"></a-asset-item>
+            <a-asset-item id="house" src="./models/house/scene.gltf"></a-asset-item>
+            <a-asset-item id="trump" src="./models/trump/scene.gltf"></a-asset-item>
+        </a-assets>
+        <a-entity environment="preset: forest"></a-entity>
+        <a-entity gltf-model="#house" position="-4 0 -7" scale="0.3 0.3 0.3"></a-entity>
+        <a-entity gltf-model="#trump" animation-mixer position="4.5 0 -7" scale="1.5 1.5 1.5"></a-entity>
+        <a-entity position="1.5 0 -7" scale="0.15 0.15 0.15" obj-model="obj: #bulbasaur-obj; mtl: #bulbasaur-mtl" ></a-entity>
+         <!--Snow-->
+        <!-- <a-plane width="30" height="30" src="#snow" repeat="4 4" rotation="-90 0 0"></a-plane> -->
+        <a-sky color="skyblue"></a-sky>
+
+    </a-scene>
+</body>
+<!--aframe-environment-component-->
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Basic Scene - A-Frame">
+    <title>Basic Scene A-Frame</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <!--npm install aframe-->
+</head>
+
+<body>
+    <a-scene>
+        <a-assets>
+            <img src="./360.jpg" alt="mars" id="360">
+            <img src="./azure.png" alt="" id="posicional">
+        </a-assets>
+        <a-image position="0 1.5 -4" src="#posicional" width="1.5" height="1.345"></a-image>
+            <a-sky src="#360" ></a-sky>
+    </a-scene>
+</body>
+
+</html>

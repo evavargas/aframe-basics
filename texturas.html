@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Basic Scene - A-Frame">
+    <title>Basic Scene A-Frame</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <!--npm install aframe-->
+</head>
+
+<body>
+    <a-scene>
+        <a-assets>
+            <img src="./snow.jpg" alt="snow" id="snow" >
+            <img src="./moon.jpg" alt="moon" id="moon" >
+        </a-assets>
+        <a-box position="0 1.5 -5" src="#snow" repeat="3 3" width="6" height="4" depth="1" ></a-box>
+        <a-plane width="30" height="30" src="#moon" repeat="4 4" rotation="-90 0 0"></a-plane>
+        <a-sky color="skyblue"></a-sky>
+
+    </a-scene>
+</body>
+
+</html>
